@@ -12,10 +12,12 @@ public class Ex1_1 {
         boolean[] char_set = new boolean[128];
         for (int i = 0; i < str.length(); i++) {
             int val = str.charAt(i);
+            System.out.println("val : " + val);
             if (char_set[val]){ //이 문자는 이미 문자열 내에 있음
                 return false;
             }
             char_set[val] = true;
+            System.out.println("char_set[val] : "+char_set[val]);
         }
         return true;
     }
