@@ -5,8 +5,9 @@ package com.springDuo.app.dataStructure;
  * Blog : https://hs95blue.github.io/
  * Github : https://github.com/hs95blue
  */
+
 public class Ex1_1 {
-    boolean isUnique(String str){
+    public boolean isUnique(String str){
         if(str.length() > 128) return false;
         boolean[] char_set = new boolean[128];
         for (int i = 0; i < str.length(); i++) {
@@ -17,5 +18,13 @@ public class Ex1_1 {
             char_set[val] = true;
         }
         return true;
+    }
+
+    //메인메소드 호출
+    public static void main(String[]args){
+
+        Ex1_1 ex = new Ex1_1();
+        System.out.println("isUnique ? : " + ex.isUnique("9....9..."));
+
     }
 }
